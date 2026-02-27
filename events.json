@@ -1,0 +1,282 @@
+{
+  "Mon": [
+    {
+      "id": "mon-city-tour",
+      "name": "City Walking Tour",
+      "date": "2026-03-02",
+      "time": "10:00",
+      "duration": "2h",
+      "capacity": 10,
+      "registered": [
+        {
+          "name": "Alex",
+          "surname": "Green"
+        },
+        {
+          "name": "Lily",
+          "surname": "Brooks"
+        }
+      ]
+    },
+    {
+      "id": "mon-sushi",
+      "name": "Sushi Workshop",
+      "date": "2026-03-02",
+      "time": "13:00",
+      "duration": "90m",
+      "capacity": 8,
+      "registered": [
+        {
+          "name": "Emma",
+          "surname": "Lewis"
+        }
+      ]
+    },
+    {
+      "id": "mon-jazz",
+      "name": "Jazz Night",
+      "date": "2026-03-02",
+      "time": "19:00",
+      "duration": "2h",
+      "capacity": 20,
+      "registered": []
+    },
+    {
+      "id": "mon-cinema",
+      "name": "Open Air Cinema",
+      "date": "2026-03-02",
+      "time": "21:00",
+      "duration": "2h",
+      "capacity": 30,
+      "registered": []
+    }
+  ],
+  "Tue": [
+    {
+      "id": "tue-yoga",
+      "name": "Yoga Session",
+      "date": "2026-03-03",
+      "time": "09:30",
+      "duration": "1h",
+      "capacity": 15,
+      "registered": []
+    },
+    {
+      "id": "tue-art",
+      "name": "Art Gallery Meetup",
+      "date": "2026-03-03",
+      "time": "14:00",
+      "duration": "1h 30m",
+      "capacity": 12,
+      "registered": []
+    },
+    {
+      "id": "tue-movie",
+      "name": "Movie Club",
+      "date": "2026-03-03",
+      "time": "18:30",
+      "duration": "2h",
+      "capacity": 18,
+      "registered": []
+    },
+    {
+      "id": "tue-games",
+      "name": "Board Games Night",
+      "date": "2026-03-03",
+      "time": "20:00",
+      "duration": "2h",
+      "capacity": 16,
+      "registered": []
+    }
+  ],
+  "Wed": [
+    {
+      "id": "wed-breakfast",
+      "name": "Business Breakfast",
+      "date": "2026-03-04",
+      "time": "11:00",
+      "duration": "1h",
+      "capacity": 14,
+      "registered": []
+    },
+    {
+      "id": "wed-coding",
+      "name": "Coding Meetup",
+      "date": "2026-03-04",
+      "time": "15:00",
+      "duration": "2h",
+      "capacity": 20,
+      "registered": []
+    },
+    {
+      "id": "wed-standup",
+      "name": "Stand-up Show",
+      "date": "2026-03-04",
+      "time": "20:00",
+      "duration": "90m",
+      "capacity": 40,
+      "registered": []
+    },
+    {
+      "id": "wed-live",
+      "name": "Live Session",
+      "date": "2026-03-04",
+      "time": "21:30",
+      "duration": "90m",
+      "capacity": 25,
+      "registered": []
+    }
+  ],
+  "Thu": [
+    {
+      "id": "thu-run",
+      "name": "Morning Run",
+      "date": "2026-03-05",
+      "time": "08:00",
+      "duration": "1h",
+      "capacity": 30,
+      "registered": []
+    },
+    {
+      "id": "thu-brunch",
+      "name": "Brunch Networking",
+      "date": "2026-03-05",
+      "time": "12:30",
+      "duration": "90m",
+      "capacity": 12,
+      "registered": []
+    },
+    {
+      "id": "thu-wine",
+      "name": "Wine Tasting",
+      "date": "2026-03-05",
+      "time": "17:30",
+      "duration": "2h",
+      "capacity": 10,
+      "registered": []
+    },
+    {
+      "id": "thu-karaoke",
+      "name": "Karaoke Evening",
+      "date": "2026-03-05",
+      "time": "19:00",
+      "duration": "2h",
+      "capacity": 22,
+      "registered": []
+    }
+  ],
+  "Fri": [
+    {
+      "id": "fri-museum",
+      "name": "Museum Tour",
+      "date": "2026-03-06",
+      "time": "10:30",
+      "duration": "2h",
+      "capacity": 25,
+      "registered": []
+    },
+    {
+      "id": "fri-pitch",
+      "name": "Startup Pitch",
+      "date": "2026-03-06",
+      "time": "16:00",
+      "duration": "2h",
+      "capacity": 18,
+      "registered": []
+    },
+    {
+      "id": "fri-dj",
+      "name": "DJ Set",
+      "date": "2026-03-06",
+      "time": "21:00",
+      "duration": "2h",
+      "capacity": 60,
+      "registered": []
+    },
+    {
+      "id": "fri-afterparty",
+      "name": "Afterparty",
+      "date": "2026-03-06",
+      "time": "23:00",
+      "duration": "3h",
+      "capacity": 80,
+      "registered": []
+    }
+  ],
+  "Sat": [
+    {
+      "id": "sat-market",
+      "name": "Farmers Market",
+      "date": "2026-03-07",
+      "time": "09:00",
+      "duration": "3h",
+      "capacity": 100,
+      "registered": []
+    },
+    {
+      "id": "sat-pottery",
+      "name": "Pottery Class",
+      "date": "2026-03-07",
+      "time": "14:30",
+      "duration": "2h",
+      "capacity": 10,
+      "registered": []
+    },
+    {
+      "id": "sat-cruise",
+      "name": "Sunset Cruise",
+      "date": "2026-03-07",
+      "time": "19:30",
+      "duration": "2h",
+      "capacity": 28,
+      "registered": []
+    },
+    {
+      "id": "sat-walk",
+      "name": "Night Walk",
+      "date": "2026-03-07",
+      "time": "22:00",
+      "duration": "90m",
+      "capacity": 18,
+      "registered": []
+    }
+  ],
+  "Sun": [
+    {
+      "id": "sun-brunch",
+      "name": "Brunch & Talk",
+      "date": "2026-03-08",
+      "time": "11:30",
+      "duration": "90m",
+      "capacity": 18,
+      "registered": []
+    },
+    {
+      "id": "sun-book",
+      "name": "Book Club",
+      "date": "2026-03-08",
+      "time": "15:30",
+      "duration": "1h",
+      "capacity": 14,
+      "registered": []
+    },
+    {
+      "id": "sun-acoustic",
+      "name": "Acoustic Session",
+      "date": "2026-03-08",
+      "time": "18:00",
+      "duration": "2h",
+      "capacity": 24,
+      "registered": []
+    },
+    {
+      "id": "sun-dinner",
+      "name": "Late Dinner Meetup",
+      "date": "2026-03-08",
+      "time": "20:30",
+      "duration": "2h",
+      "capacity": 16,
+      "registered": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "Anna",
+      "surname": "Pavlova",
+      "passwordHash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+      "role": "admin"
+    },
+    {
+      "username": "Lane",
+      "surname": "FM",
+      "passwordHash": "318aee3fed8c9d040d35a7fc1fa776fb31303833aa2de885354ddf3d44d8fb69",
+      "role": "user"
+    }
+  ]
+}

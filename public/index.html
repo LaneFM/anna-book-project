@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Pavlova Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <main class="content">
+            <section class="screen" id="homeScreen">
+                <section class="days-slider" aria-label="Days of the week"></section>
+
+                <section class="events-slider" aria-label="Events list">
+                    <div class="events-slider__header">
+                        <h1 class="events-slider__title">Events</h1>
+                    </div>
+                    <div class="events-track" id="eventsTrack"></div>
+                </section>
+            </section>
+
+            <section class="screen is-hidden" id="profileScreen" aria-label="Profile page">
+                <section id="authGuest" class="auth-card">
+                    <h1 class="profile-title auth-title" id="authTitle">Create account</h1>
+                    <p class="auth-subtitle">Manage your bookings and track signed events</p>
+                    <form id="authForm" class="register-form">
+                        <label class="form-label" for="authName">Username</label>
+                        <input class="form-input auth-input" id="authName" name="authName" type="text" required>
+
+                        <div id="authSurnameRow">
+                            <label class="form-label" for="authSurname">Surname</label>
+                            <input class="form-input auth-input" id="authSurname" name="authSurname" type="text" required>
+                        </div>
+
+                        <label class="form-label" for="authPassword">Password</label>
+                        <input class="form-input auth-input" id="authPassword" name="authPassword" type="password" required>
+
+                        <button type="submit" class="action-btn" id="authSubmitBtn">Register</button>
+                    </form>
+                    <p class="auth-message" id="authMessage"></p>
+                    <button type="button" class="auth-toggle" id="authToggleBtn">Already registered? Log in</button>
+                </section>
+
+                <section id="authUser" class="is-hidden">
+                    <div class="profile-card">
+                        <h1 class="profile-title">Profile</h1>
+                        <p class="profile-name" id="profileName">Name: -</p>
+                        <p class="profile-surname" id="profileSurname">Surname: -</p>
+                        <button type="button" class="logout-btn" id="logoutBtn">Log out</button>
+                    </div>
+
+                    <section class="profile-events">
+                        <h2 class="profile-events__title">Signed events</h2>
+                        <ul class="profile-events__list" id="profileEventsList"></ul>
+                    </section>
+                </section>
+            </section>
+
+            <section class="screen is-hidden" id="adminScreen" aria-label="Admin page">
+                <section id="adminUser">
+                    <div class="profile-card">
+                        <h1 class="profile-title">Admin panel</h1>
+                        <p class="auth-message" id="adminMessage"></p>
+                        <button type="button" class="logout-btn" id="adminPanelLogoutBtn">Log out</button>
+                    </div>
+
+                    <section class="profile-events">
+                        <label class="form-label" for="adminDaySelect">Day schedule</label>
+                        <select class="form-input" id="adminDaySelect"></select>
+
+                        <h2 class="profile-events__title">Events for selected day</h2>
+                        <ul class="profile-events__list" id="adminEventsList"></ul>
+
+                        <h2 class="profile-events__title">Event editor</h2>
+                        <form id="adminEventForm" class="register-form">
+                            <input type="hidden" id="adminEventId">
+
+                            <label class="form-label" for="adminEventName">Name</label>
+                            <input class="form-input" id="adminEventName" type="text" required>
+
+                            <label class="form-label" for="adminEventDate">Date</label>
+                            <input class="form-input" id="adminEventDate" type="date" required>
+
+                            <label class="form-label" for="adminEventTime">Time</label>
+                            <input class="form-input" id="adminEventTime" type="time" required>
+
+                            <label class="form-label" for="adminEventDuration">Duration</label>
+                            <input class="form-input" id="adminEventDuration" type="text" placeholder="2h" required>
+
+                            <label class="form-label" for="adminEventHost">Host</label>
+                            <input class="form-input" id="adminEventHost" type="text" required>
+
+                            <label class="form-label" for="adminEventCapacity">Capacity</label>
+                            <input class="form-input" id="adminEventCapacity" type="number" min="1" required>
+
+                            <button type="submit" class="action-btn" id="adminSaveBtn">Save event</button>
+                            <button type="button" class="logout-btn" id="adminNewBtn">New event</button>
+                            <button type="button" class="action-btn is-danger is-hidden" id="adminDeleteBtn">Delete event</button>
+                        </form>
+
+                        <h2 class="profile-events__title">Signed users</h2>
+                        <ul class="profile-events__list" id="adminRegisteredList"></ul>
+                    </section>
+                </section>
+            </section>
+        </main>
+
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+            <button type="button" class="mobile-nav__item is-active" data-tab="home">Calendar</button>
+            <button type="button" class="mobile-nav__item" data-tab="profile">Profile</button>
+        </nav>
+    </div>
+
+    <div class="modal is-hidden" id="eventModal" aria-hidden="true">
+        <div class="modal__backdrop" data-close-modal="event"></div>
+        <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+            <button type="button" class="modal__close" data-close-modal="event" aria-label="Close event details">&times;</button>
+            <h2 class="modal__title" id="eventModalTitle">Event details</h2>
+            <dl class="event-details" id="eventDetails"></dl>
+            <h3 class="modal__subtitle">Registered</h3>
+            <ul class="registered-list" id="registeredList"></ul>
+            <button type="button" class="action-btn" id="eventActionBtn">Register</button>
+        </section>
+    </div>
+
+    <div class="modal is-hidden" id="formModal" aria-hidden="true">
+        <div class="modal__backdrop" data-close-modal="form"></div>
+        <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="formModalTitle">
+            <button type="button" class="modal__close" data-close-modal="form" aria-label="Close form">&times;</button>
+            <h2 class="modal__title" id="formModalTitle">Register to event</h2>
+            <form id="registrationForm" class="register-form">
+                <label class="form-label" for="firstName">Name</label>
+                <input class="form-input" id="firstName" name="firstName" type="text" required>
+
+                <label class="form-label" for="lastName">Surname</label>
+                <input class="form-input" id="lastName" name="lastName" type="text" required>
+
+                <button type="submit" class="action-btn" id="formConfirmBtn">Confirm</button>
+            </form>
+        </section>
+    </div>
+
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>
